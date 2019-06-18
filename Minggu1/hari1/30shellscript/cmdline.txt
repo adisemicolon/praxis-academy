@@ -1,0 +1,10 @@
+ls
+cat
+rm cmdline.txt
+mv 
+mkdir
+rmdir
+man
+clear
+grep
+wget

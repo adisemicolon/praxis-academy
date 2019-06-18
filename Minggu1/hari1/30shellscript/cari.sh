@@ -1,0 +1,1 @@
+find /home/adi/praxis/Minggu1/hari1/ -name "cari.sh"
