@@ -1,0 +1,6 @@
+
+
+class Penjahit{
+	String nama;
+
+}
