@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" >
+    <title>What Todo</title>
+</head>
+
+<body>
+
+    <div id="app" class="container">
+
+        <div class="form-group">
+            <h1>Todo-List</h1>
+            <input type="text" class="form-control" name="todo" id="todo" placeholder="todo..." v-model="todo" @keyup.enter="addTodo">
+            <button class="btn btn-primary" @click="addTodo()" style="margin-top: 8px;">Add</button>
+        </div>
+
+        <table class="table" v-if="todos.length > 0">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Todo</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody v-for="(todo, index) in todos" :key="index">
+                <td scope="row">{{index}}</td>
+                <td>{{todo}}</td>
+                <td>
+                    <button class="btn btn-danger" @click="deleteTodo(index)">Delete</button>
+                </td>
+            </tbody>
+        </table>
+        <h2 v-else>Todo</h2>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
