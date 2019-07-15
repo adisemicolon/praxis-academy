@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: tes.db
+---
+testFramework: junit
+sourceLanguage: java
